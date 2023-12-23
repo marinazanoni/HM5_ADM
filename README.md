@@ -42,7 +42,7 @@ For a detailed understanding of the assignment requirements and problems, refer 
 You can find the dataset used in this [link](https://www.kaggle.com/datasets/vodclickstream/netflix-audience-behaviour-uk-movies).
 
 <p align="center">
-<img src="https://recoai.net/wp-content/uploads/2022/04/netflix.jpg" width = 600>
+<img src="hmw5.png" width="150" height="150">
 </p>
 
 ## Repo content
