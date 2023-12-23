@@ -32,17 +32,17 @@ The goal is to carry out the following tasks:
   - Potential optimization of the algorithm to improve time complexity, with formal proof.
 
 
-For a detailed understanding of the assignment requirements and problems, refer to this [link](https://github.com/Sapienza-University-Rome/ADM/tree/master/2023/Homework_4).
+For a detailed understanding of the assignment requirements and problems, refer to this [link](https://github.com/Sapienza-University-Rome/ADM/tree/master/2023/Homework_5).
 
 
 
 ## Dataset
-  The dataset focuses on the browsing behavior of Netflix users in the UK who willingly agreed to have their anonymized activity monitored. It specifically captures desktop and laptop activities, accounting for approximately 25% of global traffic. The data spans from January 2017 to June 2019 and exclusively documents instances when a user within the tracked panel in the UK clicked on a Netflix.com/watch URL for a movie. 
-
-You can find the dataset used in this [link](https://www.kaggle.com/datasets/vodclickstream/netflix-audience-behaviour-uk-movies).
+ The data set is designed for research purpose only. The citation data is extracted from DBLP, ACM, MAG (Microsoft Academic Graph), and other sources. The first version contains 629,814 papers and 632,752 citations. Each paper is associated with abstract, authors, year, venue, and title. The data set can be used for clustering with network and side information, studying influence in the citation network, finding the most influential papers, topic modeling analysis, etc.
+ 
+You can find the dataset used in this [link](https://www.kaggle.com/datasets/mathurinache/citation-network-dataset).
 
 <p align="center">
-<img src="hmw5.png" width="150" height="150">
+<img src="https://filelist.tudelft.nl/Library/Themaportalen/Research%20Analytics/C12.png" width = 800>
 </p>
 
 ## Repo content
