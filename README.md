@@ -3,33 +3,31 @@ This collection comprises the source code, notebooks, and supplementary resource
 
 ## Description
 
-In this assignment, Analysis is being done on Netflix users' data to gain a comprehensive understanding of user behavior within the platform, the strategy involves the application of hashing and clustering techniques. Hashing, a one-way transformation process, is utilized to protect sensitive user data or generate unique identifiers without compromising privacy. Meanwhile, clustering techniques such as k-means are employed to group users with similar behavioral patterns. By hashing user identifiers and clustering based on behavior, the platform can extract relevant information and highlights from user interactions. This approach allows for the analysis of usage patterns, identification of popular features, and understanding of specific user segments.
+In this assignment,...
 
 
 The goal is to carry out the following tasks:
-- **Recommendation System:**
-  - Implementation of a recommendation system for personalized content, products, and services based on user preferences.
-  - Utilization of a custom Locality-Sensitive Hashing (LSH) algorithm to identify similar users and recommend highly-watched movies by those users.
-  
-- **Grouping Users (Clustering)**:
+- **Graph setup**:
+  - Citation graph: Study the relationships between paper's citation.
+  - Collaborative graph: This graph should represent the collaborations of the paper's authors. 
 
-  - Feature engineering using user clicks data, creating features such as favorite genre, average click duration, time of day engagement, movie preference era, and     average daily time spent.
-  - Consideration of normalization for scaling features and application of dimensionality reduction using Multi Factor Analysis Decomposition (MFAD).
-  - Implementation of K-means clustering algorithm from scratch in MapReduce, determining optimal clusters, and comparing with K-means++ results.
-  - Characterization of clusters through pivot tables and analysis of relevant variables.
   
-- **Density-Based Clustering:**
-  - Exploration of Density-Based Clustering algorithms like OPTICS and DBSCAN on the same dataset used for K-means.
-  - Analysis of results and comparison with centroid-based clustering.
+- **Backend Implementation:**
+
+  - Graph's features
+  - Nodes' contribution 
+  - Shortest ordered walk 
+  - Disconnecting Graphs
+  - Extracting Communities
+  
+- **Frontend Implementation:**
+  - 
     
 - **Command Line Task:**
 
-  - Utilization of command line tools to answer questions about Netflix data, including the most-watched title, average time between clicks, and user spending the most time on Netflix.
+  - Utilization of command line tools to answer questions about using the **directed** and **unweighted** graph that you have previously created
     
 - **Algorithmic task:**
-  - Explanation and demonstration of a recursive algorithm for Federico's exam score optimization.
-  - Formal representation of the algorithm's time complexity using big-O notation.
-  - Potential optimization of the algorithm to improve time complexity, with formal proof.
 
 
 For a detailed understanding of the assignment requirements and problems, refer to this [link](https://github.com/Sapienza-University-Rome/ADM/tree/master/2023/Homework_5).
