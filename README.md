@@ -58,7 +58,6 @@ You can find the dataset used in this [link](https://www.kaggle.com/datasets/vod
 
 ## Collaborators
 ### <img src="ingranaggi.jpg" width="150" height="150" align="right" />
-- Hazem Aboulfotouh (aboulfotouh.2105193@studenti.uniroma1.it)
-- Camilla Brigandì (brigandi.2055650@studenti.uniroma1.it)
-- Ortal Hadad (ortal2824@gmail.com)
+- Jacopo Orsini (orsini.2099929@studenti.uniroma1.it)
+- Alessio Lani (lani.1857003@studenti.uniroma1.it)
 - Marina Zanoni (zanoni.1964213@studenti.uniroma1.it)
