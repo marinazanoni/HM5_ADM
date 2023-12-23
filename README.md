@@ -53,11 +53,11 @@ You can find the dataset used in this [link](https://www.kaggle.com/datasets/vod
 
 
 ## Usage
-- Clone the repo using the command 👉 **git clone https://github.com/marinazanoni/ADM-HW4.git** in a bash script terminal.
+- Clone the repo using the command 👉 **git clone https://github.com/marinazanoni/HM5_ADM.git** in a bash script terminal.
 - Open the Jupyter Notebook using your desired IDE and start following the instructions there in order to replicate the results.
 
 ## Collaborators
-### <img src="/images/robot.png" width="150" height="150" align="right" />
+### <img src="ingranaggi.jpg" width="150" height="150" align="right" />
 - Hazem Aboulfotouh (aboulfotouh.2105193@studenti.uniroma1.it)
 - Camilla Brigandì (brigandi.2055650@studenti.uniroma1.it)
 - Ortal Hadad (ortal2824@gmail.com)
