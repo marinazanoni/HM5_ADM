@@ -6,6 +6,14 @@ import matplotlib.pyplot as plt
 
 
 class GetFeature2:
+    '''
+    Within this class we can examine various centrality measurements such as:
+    Betweeness
+    PageRank
+    ClosenessCentrality
+    DegreeCentrality
+    We do it within already implemented functions
+    '''
 
     def __init__(self, graph, node, name):
         self.__graph = graph
