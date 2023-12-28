@@ -55,7 +55,7 @@ You can find the dataset used in this [link](https://www.kaggle.com/datasets/mat
 - Open the Jupyter Notebook using your desired IDE and start following the instructions there in order to replicate the results.
 
 ## Collaborators
-### <img src="ingranaggi.jpg" width="150" height="150" align="right" />
-- Jacopo Orsini (orsini.2099929@studenti.uniroma1.it)
+- Laura ()
 - Alessio Lani (lani.1857003@studenti.uniroma1.it)
+- Jacopo Orsini (orsini.2099929@studenti.uniroma1.it)
 - Marina Zanoni (zanoni.1964213@studenti.uniroma1.it)
