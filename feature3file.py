@@ -1,9 +1,16 @@
 import networkx as nx
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import heapq
 from sortedcontainers import SortedList
 
+
+
+path_csv = '/media/alberto/STORE N GO/cartellaprovvisorio/authors_publisheddf.csv'
+
+# Leggi il file CSV e assegna i dati a un DataFrame
+authors_publisheddf = pd.read_csv(path_csv)
 
 #Extracts a subgraph from the collaboration graph based on the top N authors.
 #Returns a subgraph: Subgraph containing collaboration information of top authors.
