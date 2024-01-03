@@ -109,7 +109,10 @@ def custom_karger(graph, node1, node2):
             if type(element)!=int:
                 node = element.split('_')
                 node = [int(elem) for elem in node]
-                first_elements[i]+=node
+                try:
+                    first_elements[i]+=node
+                except IndexError:
+                     return ("Retry")
             # If a component is a number because made up of a node only
             else:
                 # append the elemnt to the list
@@ -147,4 +150,25 @@ def custom_karger(graph, node1, node2):
     # When something went wrong in the contraction
     else:
         return "Retry, maybe iteration is key"
+
+
+
+def considerweight(GG,n1,n2, it=10):
+    res1=[[]]
+    j=0
+    while j<it:
+        # Iterates to get multiple cuts for sake of consistency
+        a= custom_karger(GG,n1, n2)
+        res1[0].append(a)
+        j+=1
+    return(res1)
+
+def weigthedmincut(listres1):
+    # Retrieves only the lists
+    edges_with_weights = [item[0] for item in listres1 if isinstance(item, list) and len(item) == 2 and item!="Retry"]
+
+    # Get the edges with minimum weigth
+    min_weight_edge = min(edges_with_weights, key=lambda x: x[1])
+
+    return(min_weight_edge)
 
