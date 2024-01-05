@@ -1,6 +1,3 @@
-import random
-import networkx as nx
-
 def find_components_dfs(graph):
     visited = set()
     components = []
@@ -46,23 +43,24 @@ def contract_edge(graphr, u, v):
     graphr.add_node(contracted_node)
 
     # Dictionaries of nodes and his neighbours
-    nn = graphr.adj[v].items()
+    nn_v = graphr.adj[v].items()
     # Add the edges to new node which before were connected to u
-    for neighbor, edge_data in nn:
+    for neighbor, edge_data in nn_v:
         if neighbor != v:
             # using ** to copy all attributes of the edges (weights or examples)
             graphr.add_edge(contracted_node, neighbor, **edge_data)
 
+    nn_u = graphr.adj[u].items()
     # Add the edges to new node which before were connected to v
-    for neighbor, edge_data in nn:
+    for neighbor, edge_data in nn_u:
         if neighbor != u:
             graphr.add_edge(contracted_node, neighbor, **edge_data)
 
     # Remove u and v from the graph
-    graphr.remove_node(u)
-    graphr.remove_node(v)
-
-    return graphr
+    if u in graphr:
+        graphr.remove_node(u)
+    if v in graphr:
+        graphr.remove_node(v)
 
 
 
@@ -84,20 +82,21 @@ def custom_karger(graph, node1, node2):
         edge = random.choice(list(gr.edges()))
         # Identify the nodes incident on the edge
         u, v = edge
-
+        
+        #print('new iteration', gr.nodes())
         # Contract the selected edge
-        graph = contract_edge(gr, u, v)
-
+        contract_edge(gr, u, v)
+    
     # Returns the connected components
     components = list(find_components_dfs(gr))
-
+    
     #creare a list for all connected components
-    first_elements = [[] for _ in range(len(components))]
+    first_elements = [[],[]]
     # a counter to go through the list
     i=0
     # To store the mincut
     res= []
-
+    
     # Apply conversion
     for elem in components:
         # first from set component I convert it to a ist
@@ -110,65 +109,53 @@ def custom_karger(graph, node1, node2):
                 node = element.split('_')
                 node = [int(elem) for elem in node]
                 try:
-                    first_elements[i]+=node
+                    first_elements[i] = node
                 except IndexError:
                      return ("Retry")
             # If a component is a number because made up of a node only
             else:
-                # append the elemnt to the list
+                # append the element to the list
                 first_elements[i].append(element)
             i +=1
+    
+    
+    # Initialize a list to store weigth separatly
+    weights_list=[]
 
-    # Select only the component with the two node of interest
-    f_elements = [elem for elem in first_elements if node1 in elem or node2 in elem]
-
-    # Initialize local variabile to store the minicut
-    #nmin = 0
-    # Andd the total weight of the mincut
-    #totw=0
-    if len(f_elements)==2:
-        for u in f_elements[0]:
-            for v in f_elements[1]:
+   # Andd the total weight of the mincut
+    totw=0
+    if len(first_elements)==2:
+        for u in first_elements[0]:
+            for v in first_elements[1]:
                 # Check if edge which connect the contracted nodes exists
-                if graph_original.has_edge(str(u),str(v)) or graph_original.has_edge(str(v),str(u)):
+                if graph_original.has_edge(u,v) or graph_original.has_edge(v,u):
                 #    nmin += 1
                     # get informations about the edges
-                    #edge_data = graph.get_edge_data(u, v)
-                    #print('edge', edge_data)
-                    # Extract the weight if we want to take it into account
-                    #peso_arco = edge_data['weight']
-                    # adding the weight to store the total cost of that cut
-                    #totw += peso_arco
-                    # And add it to the result
-                    res.append((u,v))
-        # Eventually return the length of the shortest path directly
-        #res.append(nmin)
+                    edge_data = graph.get_edge_data(u, v)
+                    if edge_data:
+                        # Extract the weight if we want to take it into account
+                        peso_arco = edge_data['weight']
+                        # adding the weight to store the total cost of that cut
+                        totw += peso_arco
+                        # And add it to the result
+                        res.append((u, v))
         # Evenetually modify res so to store the total weight of the cut
-        #res.append(totw)
-        return(res)
+        weights_list.append(totw)
+        return(res, weights_list)
 
-    # When something went wrong in the contraction
-    else:
-        return "Retry, maybe iteration is key"
+def considerweight(GG, n1, n2, it=10):
+    resp1 = []
+    resw1 = []
 
+    for _ in range(it):
+        # Create a copy of the original graph to avoid modifying it
+        respath, resweight = custom_karger(copy.deepcopy(GG), n1, n2)
+        resp1.append(respath)
+        resw1.append(resweight)
 
-
-def considerweight(GG,n1,n2, it=10):
-    res1=[[]]
-    j=0
-    while j<it:
-        # Iterates to get multiple cuts for sake of consistency
-        a= custom_karger(GG,n1, n2)
-        res1[0].append(a)
-        j+=1
-    return(res1)
-
-def weigthedmincut(listres1):
-    # Retrieves only the lists
-    edges_with_weights = [item[0] for item in listres1 if isinstance(item, list) and len(item) == 2 and item!="Retry"]
-
-    # Get the edges with minimum weigth
-    min_weight_edge = min(edges_with_weights, key=lambda x: x[1])
-
-    return(min_weight_edge)
+    # Find the index of the minimum weight
+    min_weight_index = resw1.index(min(resw1))
+    
+    # Return the path to the corrisponding minimum cut
+    return resp1[min_weight_index]
 
