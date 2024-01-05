@@ -3,6 +3,12 @@ This collection comprises the source code, notebooks, and supplementary resource
 
 ## Description
 
+## Repo content
+
+- **main.ipynb:** A comprehensive Jupyter notebook that presents a detailed analysis of the data. It includes a systematic breakdown of the analysis process, the resulting insights, and accompanying explanations to give a better understanding of the findings.
+- **functions.py:** A Python script that includes the implementation of the custom functions that were used in the Jupyter Notebook.
+- **commandline.sh:** A PowerShell script that carries out the Command Line Task.
+
 In this assignment,...
 
 
@@ -35,12 +41,6 @@ You can find the dataset used in this [link](https://www.kaggle.com/datasets/mat
 <p align="center">
 <img src="https://filelist.tudelft.nl/Library/Themaportalen/Research%20Analytics/C12.png" width = 800>
 </p>
-
-## Repo content
-
-- **main.ipynb:** A comprehensive Jupyter notebook that presents a detailed analysis of the data. It includes a systematic breakdown of the analysis process, the resulting insights, and accompanying explanations to give a better understanding of the findings.
-- **functions.py:** A Python script that includes the implementation of the custom functions that were used in the Jupyter Notebook.
-- **commandline.sh:** A PowerShell script that carries out the Command Line Task.
 
 
 ## Usage
