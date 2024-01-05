@@ -1,5 +1,3 @@
-
-from pickle import FALSE, TRUE
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -51,12 +49,12 @@ def functionality5(G, N, paper1, paper2):
     # Check if both elements are in the same list
     for sublist in communities:
         if element_set.issubset(sublist):
-            same_comunity = TRUE
+            same_comunity = 0
             break
     else:
-        same_comunity = FALSE
+        same_comunity = 1
 
     
-    return min_edges_removed, communities, same_comunity, 
+    return min_edges_removed, communities, same_comunity
 
 
