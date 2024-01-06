@@ -6,7 +6,7 @@ This collection comprises the source code, notebooks, and supplementary resource
 ## Repo content
 
 - **main.ipynb:** A comprehensive Jupyter notebook that presents a detailed analysis of the data. It includes a systematic breakdown of the analysis process, the resulting insights, and accompanying explanations to give a better understanding of the findings.
-- **functions.py:** A Python script that includes the implementation of the custom functions that were used in the Jupyter Notebook.
+- **feature{i}.py:** Python scripts that includes the implementation of the i-th custom functionalities used in the Notebook.
 - **commandline.sh:** A PowerShell script that carries out the Command Line Task.
 
 In this assignment,...
