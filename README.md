@@ -18,9 +18,9 @@ The goal is to carry out the following tasks:
   - Collaborative graph: This graph should represent the collaborations of the paper's authors. 
 
   
-- **Backend and Frontend Implementation:**
+- **Functionality to extract graph's features:**
 
-  - The functionalities will be implemented in the Backend section. The Frontend section primarily discusses the menu that will be provided to the user, as well as the expected results that should be displayed to the user after selecting each of the functionalities.
+  - Functionalities are implemented.
     
 - **Command Line Task:**
 
