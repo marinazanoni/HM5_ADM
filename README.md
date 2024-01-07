@@ -7,7 +7,8 @@ This collection comprises the source code, notebooks, and supplementary resource
 
 - **main.ipynb:** A comprehensive Jupyter notebook that presents a detailed analysis of the data. It includes a systematic breakdown of the analysis process, the resulting insights, and accompanying explanations to give a better understanding of the findings.
 - **feature{i}.py:** Python scripts that includes the implementation of the i-th custom functionalities used in the Notebook.
-- **commandline.sh:** A PowerShell script that carries out the Command Line Task.
+- **CommandLine.sh:** A Shell script that carries out the Command Line Task.
+- **ScreenshotCL.sh:** The screenshot of the output of CL, which result can be obtained after running CommandLine.sh
 
 In this assignment,...
 
